@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Chat Names" max_length="40" name="x_9104_servicenowm_chat_names" type="collection">
+        <element label="ID" max_length="100" name="id" type="string"/>
+        <element label="Name" max_length="100" name="name" type="string"/>
+    </element>
+</database>

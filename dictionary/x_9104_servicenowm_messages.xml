@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Messages" max_length="40" name="x_9104_servicenowm_messages" sizeclass="5317" type="collection">
+        <element label="Attachments" max_length="200" name="attachments" type="string"/>
+        <element label="Avatar_URL" max_length="200" name="avatar_url" type="string"/>
+        <element label="Created At" max_length="100" name="created_at" type="string"/>
+        <element label="Group ID" max_length="200" name="group_id" type="string"/>
+        <element label="Group Name" max_length="100" name="group_name" type="string"/>
+        <element label="ID" max_length="200" name="id" type="string"/>
+        <element label="Name" max_length="100" name="name" type="string"/>
+        <element label="Sender ID" max_length="100" name="sender_id" type="string"/>
+        <element label="Sender Type" max_length="100" name="sender_type" type="string"/>
+        <element label="Source GUID" max_length="100" name="source_guid" type="string"/>
+        <element label="System" max_length="10" name="system" type="string"/>
+        <element label="Text" max_length="4000" name="text" type="string"/>
+        <element label="User ID" max_length="100" name="user_id" type="string"/>
+    </element>
+</database>

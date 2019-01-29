@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_9104_servicenowm.GroupMeServer</api_name>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>GroupMeServer</name>
+        <script><![CDATA[var GroupMeServer = Class.create();
+GroupMeServer.prototype = {
+    initialize: function() {
+    },
+	
+	checkDataLimits: function() {
+		var checkAccess = new GlideRecord('x_9104_servicenowm_data_limit');
+		var accessString = 'membersDYNAMIC' + gs.getUserID();
+		checkAccess.addEncodedQuery(accessString);
+		checkAccess.query();
+		var queryString = ('group_name=VIP 19 Rise and Shine Pride 39');
+		while (checkAccess.next()) {
+			queryString = queryString + '^OR' + checkAccess.condition;
+		}
+		current.addEncodedQuery(queryString);
+		
+	},
+	
+	findHttpLink: function(record) {
+	   var messageText = record.text.toString();
+	   var httpsLoc = messageText.indexOf("https://");
+	   var newText = messageText.slice(httpsLoc,messageText.length);
+	   var spaceLoc = newText.indexOf(" ");
+		if (spaceLoc== -1) {
+			spaceLoc = newText.length;
+		}
+		gs.info("Slabodnick " + spaceLoc + " " + messageText.length);
+	   var findText = newText.slice(0,spaceLoc);
+		this.populateLinkArtifact(record.name,messageText,findText);
+	},
+	
+	populateLinkArtifact: function(name,description,link) {
+	   	var gr = new GlideRecord('x_9104_servicenowm_artifacts');
+		gr.name = name;
+		gr.description = description;
+		gr.website_link = link;
+		gr.insert();
+	},
+	
+    type: 'GroupMeServer'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>michael.slabodnick</sys_created_by>
+        <sys_created_on>2018-12-17 17:13:51</sys_created_on>
+        <sys_id>07c1523b37922300b52303a973990ead</sys_id>
+        <sys_mod_count>36</sys_mod_count>
+        <sys_name>GroupMeServer</sys_name>
+        <sys_package display_value="ServiceNowMe" source="x_9104_servicenowm">485039b337122300b52303a973990eae</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="ServiceNowMe">485039b337122300b52303a973990eae</sys_scope>
+        <sys_update_name>sys_script_include_07c1523b37922300b52303a973990ead</sys_update_name>
+        <sys_updated_by>michael.slabodnick</sys_updated_by>
+        <sys_updated_on>2018-12-21 18:45:14</sys_updated_on>
+    </sys_script_include>
+</record_update>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>POST</http_method>
+        <name>BotPost</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+    var callServer = new x_9104_servicenowm.APIProcess();
+	callServer.callBackRequest(request);
+		response
+        .setStatus(200);
+    
+ 
+    // implement resource here
+
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_9104_servicenowm/groupme/bot</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/bot</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>false</requires_authentication>
+        <requires_snc_internal_role>true</requires_snc_internal_role>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-12-17 14:52:07</sys_created_on>
+        <sys_id>3cc131fb37122300b52303a973990e0d</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>BotPost</sys_name>
+        <sys_package display_value="ServiceNowMe" source="x_9104_servicenowm">485039b337122300b52303a973990eae</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ServiceNowMe">485039b337122300b52303a973990eae</sys_scope>
+        <sys_update_name>sys_ws_operation_3cc131fb37122300b52303a973990e0d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-12-17 15:42:22</sys_updated_on>
+        <web_service_definition display_value="GroupMe">d5b1fdbb37122300b52303a973990e4f</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>

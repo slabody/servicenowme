@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>25374abb37522300b52303a973990eb3</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_group_has_role">
+    <sys_group_has_role action="INSERT_OR_UPDATE">
+        <granted_by/>
+        <group display_value="GroupMe Users" name="GroupMe Users">e0274abb37522300b52303a973990ee9</group>
+        <inherits>true</inherits>
+        <role display_value="x_9104_servicenowm.messages_user" name="x_9104_servicenowm.messages_user">32f5f93f37122300b52303a973990ef2</role>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-12-17 16:25:24</sys_created_on>
+        <sys_id>25374abb37522300b52303a973990eb3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-12-17 16:25:24</sys_updated_on>
+    </sys_group_has_role>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-12-17 16:27:06</sys_created_on>
+        <sys_id>e6974ebb37522300b52303a973990e36</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Created 2018-12-17 08:25:24</sys_name>
+        <sys_package display_value="ServiceNowMe" source="x_9104_servicenowm">485039b337122300b52303a973990eae</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ServiceNowMe">485039b337122300b52303a973990eae</sys_scope>
+        <sys_update_name>sys_metadata_link_e6974ebb37522300b52303a973990e36</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-12-17 16:27:06</sys_updated_on>
+        <tablename>sys_group_has_role</tablename>
+    </sys_metadata_link>
+</record_update>

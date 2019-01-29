@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_embedded_help_role">
+    <sys_embedded_help_role action="INSERT_OR_UPDATE">
+        <order>1000</order>
+        <role display_value="x_9104_servicenowm.chat_names_user" name="x_9104_servicenowm.chat_names_user">b26fb93737522300b52303a973990e4e</role>
+        <sys_class_name>sys_embedded_help_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-12-17 15:51:20</sys_created_on>
+        <sys_id>b26fb93737522300b52303a973990e50</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>b26fb93737522300b52303a973990e4e</sys_name>
+        <sys_package display_value="ServiceNowMe" source="x_9104_servicenowm">485039b337122300b52303a973990eae</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ServiceNowMe">485039b337122300b52303a973990eae</sys_scope>
+        <sys_update_name>sys_embedded_help_role_b26fb93737522300b52303a973990e50</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-12-17 15:51:20</sys_updated_on>
+    </sys_embedded_help_role>
+</record_update>

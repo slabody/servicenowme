@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role_contains">
+    <sys_user_role_contains action="INSERT_OR_UPDATE">
+        <contains display_value="x_9104_servicenowm.chat_names_user" name="x_9104_servicenowm.chat_names_user">b26fb93737522300b52303a973990e4e</contains>
+        <role display_value="x_9104_servicenowm.user" name="x_9104_servicenowm.user">39bb9ecd37a2a300b52303a973990e72</role>
+        <sys_class_name>sys_user_role_contains</sys_class_name>
+        <sys_created_by>michael.slabodnick</sys_created_by>
+        <sys_created_on>2018-12-21 15:08:08</sys_created_on>
+        <sys_id>bcebdacd37a2a300b52303a973990ec8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_9104_servicenowm.chat_names_user.x_9104_servicenowm.user</sys_name>
+        <sys_package display_value="ServiceNowMe" source="x_9104_servicenowm">485039b337122300b52303a973990eae</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ServiceNowMe">485039b337122300b52303a973990eae</sys_scope>
+        <sys_update_name>sys_user_role_contains_bcebdacd37a2a300b52303a973990ec8</sys_update_name>
+        <sys_updated_by>michael.slabodnick</sys_updated_by>
+        <sys_updated_on>2018-12-21 15:08:08</sys_updated_on>
+    </sys_user_role_contains>
+</record_update>

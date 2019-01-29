@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_9104_servicenowm.APIProcess</api_name>
+        <client_callable>false</client_callable>
+        <description>Server Side Processing for GroupMe API Callback to ServiceNow</description>
+        <name>APIProcess</name>
+        <script><![CDATA[var APIProcess = Class.create();
+APIProcess.prototype = {
+    initialize: function() {
+    },
+
+	callBackRequest: function(request) {
+	  	var requestBodyData = request.body.data;
+		var newMessage = new GlideRecord('x_9104_servicenowm_messages');
+		var findDictionary = new GlideRecord('sys_dictionary');
+		findDictionary.addEncodedQuery('name=x_9104_servicenowm_messages^sys_name!=NULL^internal_type!=collection^ORinternal_type=NULL');
+		findDictionary.query();
+		while (findDictionary.next()) {
+			var elementName = findDictionary.getElement('element');
+			newMessage.setValue(elementName, requestBodyData[elementName]);
+	
+		}
+		newMessage.group_name = this.matchGroupName(requestBodyData.group_id);
+		newMessage.insert();
+	},
+	
+	matchGroupName: function(group_id) {
+		var findGroupName = new GlideRecord('x_9104_servicenowm_chat_names');
+		findGroupName.addQuery('id',group_id);
+		findGroupName.query();
+		if (findGroupName.next()){
+			return findGroupName.name;
+		} 
+		else
+			return 'Unknown';
+	},
+	
+	fixGroupNames: function() {
+		gs.info('fixing group names');
+		var findChats = new GlideRecord('x_9104_servicenowm_messages');
+		findChats.addQuery('group_name','Unknown');
+		findChats.query();
+		gs.info(findChats.getRowCount());
+		while (findChats.next()) {
+			var groupResult = this.matchGroupName(findChats.group_id);
+			if (groupResult != 'Unknown') {
+				findChats.group_name = groupResult;
+				findChats.update();
+			}
+		}
+	},
+	
+	
+	
+    type: 'APIProcess'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-12-17 15:23:32</sys_created_on>
+        <sys_id>61a7fdff37122300b52303a973990e10</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_name>APIProcess</sys_name>
+        <sys_package display_value="ServiceNowMe" source="x_9104_servicenowm">485039b337122300b52303a973990eae</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="ServiceNowMe">485039b337122300b52303a973990eae</sys_scope>
+        <sys_update_name>sys_script_include_61a7fdff37122300b52303a973990e10</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-12-17 16:11:37</sys_updated_on>
+    </sys_script_include>
+</record_update>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Artifacts" max_length="40" name="x_9104_servicenowm_artifacts" type="collection">
+        <element label="Description" max_length="1000" name="description" type="string"/>
+        <element label="File" max_length="40" name="file" type="file_attachment"/>
+        <element label="Name" max_length="100" name="name" type="string"/>
+        <element label="Website Link" max_length="1024" name="website_link" type="url"/>
+    </element>
+</database>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="info" label="Info" language="en" table="x_9104_servicenowm_api_log">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>info</element>
+            <help/>
+            <hint/>
+            <label>Info</label>
+            <language>en</language>
+            <name>x_9104_servicenowm_api_log</name>
+            <plural>Infos</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-12-17 14:46:18</sys_created_on>
+            <sys_id>c680f1bb37122300b52303a973990e96</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Info</sys_name>
+            <sys_package display_value="ServiceNowMe" source="x_9104_servicenowm">485039b337122300b52303a973990eae</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="ServiceNowMe">485039b337122300b52303a973990eae</sys_scope>
+            <sys_update_name>sys_documentation_x_9104_servicenowm_api_log_info_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-12-17 14:46:18</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>
